@@ -4,15 +4,15 @@ class CustomText extends StatelessWidget {
   const CustomText({
     super.key,
     required this.text,
-    required this.color,
-    required this.fontWeight,
-    required this.size,
+     this.color,
+     this.fontWeight,
+     this.size,
   });
 
   final String text;
-  final Color color;
-  final FontWeight fontWeight;
-  final double size;
+  final Color? color;
+  final FontWeight? fontWeight;
+  final double? size;
 
   @override
   Widget build(BuildContext context) {

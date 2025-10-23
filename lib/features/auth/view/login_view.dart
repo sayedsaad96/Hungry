@@ -44,6 +44,23 @@ class LoginView extends StatelessWidget {
                   hint: 'Password',
                   isPassword: true,
                 ),
+                Gap(30),
+                Container(
+                  height: 55,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: CustomText(
+                      text: 'Login',
+                      color: AppColors.primary,
+                      fontWeight: FontWeight.w500,
+                      size: 16,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
