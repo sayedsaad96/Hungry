@@ -41,7 +41,7 @@ class _CustomTextfieldState extends State<CustomTextfield> {
       cursorColor: AppColors.primary,
       cursorHeight: 20,
       validator: (v) {
-        if (v == null) {
+        if (v == null || v.isEmpty) {
           return 'Please fill ${widget.hint}';
         }
         return null;
