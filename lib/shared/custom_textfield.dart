@@ -41,7 +41,7 @@ class _CustomTextfieldState extends State<CustomTextfield> {
       cursorColor: AppColors.primary,
       cursorHeight: 20,
       validator: (v) {
-        if (v == null) {
+        if (v == null || v.isEmpty) {
           return 'Please fill ${widget.hint}';
         }
         return null;
@@ -51,7 +51,9 @@ class _CustomTextfieldState extends State<CustomTextfield> {
         suffixIcon: widget.isPassword
             ? GestureDetector(
                 onTap: _togglePassword,
-                child: Icon(CupertinoIcons.eye),
+                child: Icon(
+                  _obscureText ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
+                ),
               )
             : null,
         enabledBorder: OutlineInputBorder(
